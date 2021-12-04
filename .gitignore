@@ -4,3 +4,6 @@ Cargo.lock
 # IDE specific
 /.vscode
 /.idea
+
+# Testing input
+input.txt
