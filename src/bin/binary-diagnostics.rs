@@ -123,7 +123,7 @@ fn calculate_oxygen(input: &Vec<Vec<bool>>) -> Option<Vec<bool>> {
     let max_index = binary_size(input);
     while list.len() > 1 && index < max_index {
         let (zero, one) = binary_count(&list, index);
-        list = filter_list(list, index, (one >= zero));
+        list = filter_list(list, index, one >= zero);
         index += 1
     }
     return list.pop();
@@ -135,7 +135,7 @@ fn calculate_co2(input: &Vec<Vec<bool>>) -> Option<Vec<bool>> {
     let max_index = binary_size(input);
     while list.len() > 1 && index < max_index {
         let (zero, one) = binary_count(&list, index);
-        list = filter_list(list, index, (zero > one));
+        list = filter_list(list, index, zero > one);
         index += 1
     }
     return list.pop();
